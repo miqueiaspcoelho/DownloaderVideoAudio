@@ -6,8 +6,7 @@ from pathlib import Path
 class YoutubeDownloader:
     def __init__(self, url: str, playlist: bool):
         self.url = url
-        self.playlist = playlist
-        
+        self.playlist = playlist        
         self.path = Path.home() / "Downloads"
         
         os.makedirs(self.path, exist_ok=True)
