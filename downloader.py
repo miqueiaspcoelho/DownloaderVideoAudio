@@ -20,10 +20,8 @@ class YoutubeDownloader:
             'noplaylist': self.playlist
         }
         try:
-            print("Download do video em andamento...")
             with YoutubeDL(videoOptions) as ydl:
                 ydl.download([self.url])
-            print("Download concluido.")
         except DownloadError as e:
             print(f"Erro no download: {e}")
         except Exception as e:
@@ -43,10 +41,8 @@ class YoutubeDownloader:
             'noplaylist': self.playlist
         }
         try:
-            print("Download do audio em andamento...")
             with YoutubeDL(audioOptions) as ydl:
                 ydl.download([self.url])
-            print("Download concluido.")
         except DownloadError as e:
             print(f"Erro no download: {e}")
         except Exception as e:

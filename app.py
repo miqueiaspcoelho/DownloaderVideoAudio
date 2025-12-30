@@ -8,7 +8,6 @@ from functions import utils
 
 #definições globais
 ctk.set_appearance_mode('dark')
-ctk.set_default_color_theme("themes/dark_blue.json")
 app = ctk.CTk()
 app.title('Audio e Video Downloader')
 app.geometry('400x320')
