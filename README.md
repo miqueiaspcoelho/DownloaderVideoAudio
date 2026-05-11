@@ -62,5 +62,5 @@ Os arquivos são salvos automaticamente no diretório Downloads do computador do
 
 ## Melhorias
 
-Posteriormente será lançado versão para destopk com interface gráfica para melhor experiência de usuário.
+Foi implementada a versão para desktop para o sistema operacional Windows, trazendo uma interface gráfica amigável para o usuário final
 
