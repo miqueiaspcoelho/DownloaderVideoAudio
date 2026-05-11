@@ -1,38 +1,17 @@
-# main.py
-from downloader import YoutubeDownloader
+#!/usr/bin/env python3
+"""
+Wrapper principal para executar a aplicação.
 
-def main():
-    print("YouTube Downloader (yt_dlp)\n")
-    url = input("Cole a URL do video: ").strip()
-    print("\nPlaylist ?")
-    print("1 - Sim")
-    print("2 - Nao")
-    playlist = input("Digite 1 ou 2: ").strip()
-    if playlist == '1':
-        playlist = False
-    elif playlist == '2':
-        playlist = True
-    else:
-        print("Opcao invalida")
-        exit()
+Este arquivo permite executar: python main.py
+"""
 
-    downloader = YoutubeDownloader(url, playlist)
+import sys
+from pathlib import Path
 
-    print("\nO que deseja baixar?")
-    print("1 - Video")
-    print("2 - Musica (MP3)")
+# Adiciona o diretório raiz ao path
+sys.path.insert(0, str(Path(__file__).parent))
 
-    escolha = input("Digite 1 ou 2: ").strip()
+from app import main
 
-    if escolha == '1':
-        downloader.videoDownload()
-    elif escolha == '2':
-        downloader.audioDownload()
-    else:
-        print("Opcaoo invalida.")
-
-if __name__ == '__main__':
-    try:
-        main()
-    except KeyboardInterrupt:
-        print("\nInterrompido pelo usuário.")
+if __name__ == "__main__":
+    sys.exit(main())
